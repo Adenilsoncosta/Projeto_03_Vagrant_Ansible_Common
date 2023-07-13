@@ -1,0 +1,28 @@
+- name: update cache
+  apt:
+    update_cache: yes
+
+- name: update SO
+  apt:
+    name: "*"
+    state: latest
+
+- name: Set a hostname
+  hostname:
+    name: projeto-03-vagrant-ansible-common          
+
+- name: install packages
+  apt:
+    name:
+      - vim
+      - curl
+      - telnet	
+      - unzip
+      - wget
+      - net-tools
+      - htop
+      - nmap      
+         
+      
+ 
+           
